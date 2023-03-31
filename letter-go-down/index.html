@@ -1,11 +1,80 @@
 <!DOCTYPE HTML>
 <head>
   <title>Letter Go Down</title>
+  <style src="css/main.css">
+  <script src="js/lgd.js">
 </head>
 <body>
-  Construction<br>
-  Page<br>
-  <br>
-  <br>
-  Page under Construction, you know<br>
+	<div style="padding: 10px;">
+    	<span><span class="letter">Make the letter touch the bottom of the box to win</span>!<br/>
+        	<span style="font-size: 30px;" id="prog">0</span>
+            <span class="letter">px to go</span>.
+        </span><br/>
+        <div style="width: 406px; height: 406px; margin: 0 auto; position: relative;">
+			<canvas id="c" width="400" height="400" style="border: 3px solid white; border-radius: 10px;"></canvas>
+            <div class="end"><span id="L">LETTER</span><br/><span id="G">GO</span><br/><span id="D">DOWN</span></div>
+        </div>
+    </div>
+    <div style="position: relative; font-size: 150%; margin: 10px;">
+    	<span class="letter">Upgrades</span> (<span class="letter">or Position Derivatives</span>)<br>
+        <span style="text-align: left; position: absolute; top: 0px; left: calc(50vw - 209.5px);" id="msg"></span>
+    </div>
+    <div class="ug-container">
+    	<div class="ug-row">
+        	<div><span class="letter">Position</span>: </div>
+        	<div id="pos">0</div>
+        	<div class="btn"></div>
+        </div>
+    	<div class="ug-row">
+        	<div><span class="letter">Velocity</span>: </div>
+        	<div id="vel">0</div>
+        	<div class="btn"><button id="u1" onClick="buy(1)">Cost: 0 Position</button></div>
+        </div>
+    	<div class="ug-row">
+        	<div><span class="letter">Acceleration</span>: </div>
+        	<div id="acc">0</div>
+        	<div class="btn"><button id="u2" onClick="buy(2)">Cost: 0 Position</button></div>
+        </div>
+    	<div class="ug-row">
+        	<div><span class="letter">Jerk</span>: </div>
+        	<div id="jer">0</div>
+        	<div class="btn"><button id="u3" onClick="buy(3)">Cost: 0 Position</button></div>
+        </div>
+    	<div class="ug-row">
+        	<div><span class="letter">Snap</span>: </div>
+        	<div id="sna">0</div>
+        	<div class="btn"><button id="u4" onClick="buy(4)">Cost: 0 Position</button></div>
+        </div>
+    	<div class="ug-row">
+        	<div><span class="letter">Crackle</span>: </div>
+        	<div id="cra">0</div>
+        	<div class="btn"><button id="u5" onClick="buy(5)">Cost: 0 Position</button></div>
+        </div>
+    	<div class="ug-row">
+        	<div><span class="letter">Pop</span>: </div>
+        	<div id="pop">0</div>
+        	<div class="btn"><button id="u6" onClick="buy(6)">Cost: 0 Position</button></div>
+        </div>
+    	<div class="ug-row">
+        	<div><span class="letter">Lock</span>: </div>
+        	<div id="loc">0</div>
+        	<div class="btn"><button id="u7" onClick="buy(7)">Cost: 0 Position</button></div>
+        </div>
+    	<div class="ug-row">
+        	<div><span class="letter">Drop</span>: </div>
+        	<div id="dro">0</div>
+        	<div class="btn"><button id="u8" onClick="buy(8)">Cost: 0 Position</button></div>
+        </div>
+    	<div class="ug-row">
+        	<div><span class="letter">Shot</span>: </div>
+        	<div id="sho">0</div>
+        	<div class="btn"><button id="u9" onClick="buy(9)">Cost: 0 Position</button></div>
+        </div>
+    	<div class="ug-row">
+        	<div><span class="letter">Put</span>: </div>
+        	<div id="put">0</div>
+        	<div class="btn"><button id="u10" onClick="buy(10)">Cost: 0 Position</button></div>
+        </div>
+    </div>
+    <div style="position: absolute; top: 0; left: 0; padding: 10px; font: 20px monospace; text-align: left;" id="timer">0.000sec<br>Buy a Velocity to start the timer</div>
 </body>
