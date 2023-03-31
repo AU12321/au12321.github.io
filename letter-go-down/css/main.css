@@ -1,0 +1,64 @@
+    body {
+    	background-color: black;
+        color: white;
+        font: bold 15px monospace;
+        text-align: center;
+        overflow: hidden;
+        user-select: none;
+    }
+    button {
+    	background: black;
+        border: 2px solid white;
+        font: bold 15px monospace;
+        border-radius: 5px;
+        color: white;
+        transition: 0.2s;
+    }
+    button:hover {
+    	background: white;
+        color: black;
+        cursor: pointer;
+    }
+    .nah {
+    	border-color: gray;
+        color: gray;
+    }
+    .nah:hover {
+    	background: gray;	
+        cursor: default;
+    }
+    div > button {
+    	width: 300px;
+    }
+    .ug-container {
+    	width: 80vw;
+        max-width: 800px;
+        margin: 0 auto;
+    }
+    .ug-row {
+    	display: flex;
+        height: 30px;
+    }
+    .ug-row > div {
+    	flex: 1;
+        text-align: left;
+    }
+    .ug-row > .btn {
+    	flex: 2;
+        text-align: right;
+    }
+    .halt {
+    	pointer-events: none;
+    }
+    .letter {
+    	display: inline-block;
+    }
+    .end {
+    	font-size: 150px;
+        line-height: 85%;
+        text-align: left;
+        position: absolute;
+        top: 0px;
+        left: 330px;
+        visibility: hidden;
+    }
