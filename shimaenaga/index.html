@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <title>しまえながの名前提案ツール</title>
+    <meta charset="utf-8">
+  </head>
+  <body>
+    <p>あなたのしまえながの名前は…</p>
+    <p><span id="name" style="font-weight: bold; font-size: 120%;">nullえなが</span> です。</p>
+    <button onclick="generate()">別の名前を生成する</button>
+    <script>
+      let str = "あいうえおかきくけこさしすせそたちつてとなにぬねのはひふへほまみむめもやゆよらりるれろわをんゔがぎぐげござじずぜぞだぢづでどばびぶべぼぱぴぷぺぽぁぃぅぇぉっゃゅょゎ";
+      let generate = () => document.getElementById("name").innerText = str[Math.floor(Math.random() * str.length)] + str[Math.floor(Math.random() * str.length)] + "えなが";
+    </script>
+  </body>
+</html>
