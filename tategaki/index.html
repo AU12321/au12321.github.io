@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <title>縦書きジェネレーター</title>
+    <meta charset="utf-8">
+    <script>
+      function convert() {
+        let input = document.getElementById("in").value.split("\n");
+        for (let i = 1; i < s.length; i++) s[i].padEnd(s[i - 1].length, "　");
+        let result = [];
+        while (input.length) {
+          let row = [];
+          for (let i = input.length - 1; i >= 0; i--) {
+            row.concat(input[i].splice(0, 1));
+            if (!input[i].length) input.splice(i, 1);
+          }
+          result.push(row.join("　"));
+        }
+        document.getElementById("out").value = result.join("\n");
+      }
+    </script>
+  </head>
+  <body>
+    <h1>文章を〇亀製麺風に変換します</h1>
+    <textarea id="in" placeholder="入力"></textarea>
+    <button onclick="convert()">変換する</button>
+    <textarea id="out" placeholder="出力"></textarea>
+  </body>
+</html>
