@@ -6,7 +6,7 @@
     <script>
       function convert() {
         let input = document.getElementById("in").value.split("\n");
-        for (let i = 1; i < s.length; i++) s[i].padEnd(s[i - 1].length, "　");
+        for (let i = 1; i < input.length; i++) input[i].padEnd(input[i - 1].length, "　");
         let result = [];
         while (input.length) {
           let row = [];
@@ -22,8 +22,8 @@
   </head>
   <body>
     <h1>文章を〇亀製麺風に変換します</h1>
-    <textarea id="in" placeholder="入力"></textarea>
-    <button onclick="convert()">変換する</button>
-    <textarea id="out" placeholder="出力"></textarea>
+    <textarea id="in" rows="5" cols="20" placeholder="入力"></textarea><br>
+    <button onclick="convert()">変換する</button><br>
+    <textarea id="out" rows="10" cols="10" placeholder="出力"></textarea>
   </body>
 </html>
